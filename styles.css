@@ -1,0 +1,505 @@
+@font-face {
+    font-family: 'quicksand';
+    src: url(../fonts/Quicksand/quicksand-regular-webfont.woff) format('woff');
+    src: url(../fonts/Quicksand/quicksand-regular-webfont.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'beyond';
+    src: url(../fonts/Beyond/beyond_the_mountains-webfont.woff) format('woff');
+    src: url(../fonts/Beyond/beyond_the_mountains-webfont.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+}
+
+body {
+    font-family: 'quicksand', cursive, sans-serif;
+}
+
+.logo {
+    font-family: 'Beyond', cursive, sans-serif;
+}
+
+header {
+    display: inline;
+}
+
+
+/* navbar */
+nav {
+    height: 9vh;
+    display: flex;
+    background-image: linear-gradient(-90deg, #0097e6, #8c7ae6);
+    padding: 0 10px;
+    justify-content: space-around;
+    opacity: 0.95;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 3px 3px 0  rgba(0, 0, 0, 0.2);
+}
+
+nav .logo {
+    color: #dcdde1;
+    display: flex;
+    font-size: 23px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-around;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-links li a:hover {
+    background-color: #fff;
+    color: #8c7ae6;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+/* Hamburger Menu */
+
+.burger span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #dcdde1;
+    margin: 5px;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+/* Slider */
+slider {
+    display: block;
+    width: 100%;
+    height: 91vh;
+    background-color: #1f1f1f;
+    overflow: hidden;
+    position: relative;
+}
+
+slider > * {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 91vh;
+    background-color: #1f1f1f;
+    overflow: hidden;
+    animation: slide 12s infinite;
+    overflow: hidden;
+}
+
+slide:nth-child(1) {
+    left: 0%;
+    animation-delay: -1s;
+    background-image: url(../img/slides/view1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+slide:nth-child(2) {
+    animation-delay: 2s;
+    background-image: url(../img/slides/view2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+slide:nth-child(3) {
+    animation-delay: 5s;
+    background-image: url(../img/slides/view3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+slide:nth-child(4) {
+    animation-delay: 8s;
+    background-image: url(../img/slides/view4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+slide h1 {
+    display: inline-block;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    margin-top: 200px;
+    font-size: 3em;
+    font-weight: lighter;
+}
+
+slide p {
+    display: inline-block;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1.5em;
+    padding-top: 10px;
+}
+
+@keyframes slide {
+    0% {left: 100%; width: 100%;}
+    5% {left: 0%}
+    25% {left: 0%;}
+    30% {left: -100%; width: 100%;}
+    30.0001% {left: -100%; width: 0%;}
+    100% {left: 100%; width: 0%;}
+}
+
+
+/* KTI */
+#kti {
+    background-color: rgb(243, 239, 239);
+    padding: 50px 0;
+}
+
+#kti h2 {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.purple {
+    color: #8854d0;
+    font-weight: bold;
+}
+
+#kti .kti-container {
+    display: flex;
+    margin: 0 50px;
+    justify-content: center;
+    flex: 1;
+}
+
+.kti-card {
+    width: 20%;
+    border: 1px solid rgb(216, 213, 213);
+    margin: 15px;
+    box-sizing: border-box;
+    border-radius: 7px;
+    padding: 25px;
+    background-color: #fff;
+    transition: .3s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.kti-card:hover {
+    margin-top: 25px;
+    background-color: #9c88ff;
+    color: #fff;
+}
+
+.kti-card .image img {
+    width: 100%;
+    height: 100px;
+    object-position: center;
+    object-fit: none;
+}
+
+.kti-card .caption {
+    text-align: center;
+}
+
+/* Content */
+main {
+    overflow: auto;
+}
+
+.container {
+    padding: 25px;
+    background-color: #fff;
+}
+
+#content {
+    padding: 10px 30px 40px;
+    float: right;
+    width: 75%;
+    border: 1px solid rgb(216, 213, 213);
+    border-radius: 7px;
+    margin-bottom: 80px;
+}
+
+.subtitle {
+    line-height: 2.5em;
+    font-size: 1.5em;
+    color: #8854d0;
+}
+
+#tentang img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    object-position: center;
+}
+
+#tentang p {
+    padding-top: 20px;
+}
+
+/* Destinasi */
+.galeri {
+    width: 100%px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+.thumbnail {
+    position: relative;
+    width: 32%;
+    height: 320px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.thumbnail img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumbnail-title {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.thumbnail-title span {
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    color: #fff;
+    padding-top: 140px;
+    line-height: 1.5em;
+    font-size: 18px;
+    text-align: center;
+    opacity: 0;
+    transform: scale(0);
+    transition: .4s;
+    background-image: repeating-linear-gradient(-90deg, #8c7ae6, #0097e6);
+    z-index: 2;
+}
+
+.thumbnail:hover span {
+    opacity: 0.9;
+    transform: scale(1);
+}
+
+/* Tentang */
+#kuliner p{
+    padding-top: 20px;
+}
+
+.kuliner-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.kuliner-card {
+   width: 23%;
+   height: 160px;
+   border-radius: 7px;
+   cursor: pointer;
+   background-color: #00a8ff;
+   transition: .3s;
+   margin-bottom: 20px;
+}
+
+.kuliner-card:hover {
+    height: 400px;
+}
+
+.kuliner-image img {
+    width: 100%;
+    height: 160px;
+    border-radius: 7px;
+    object-fit: cover;
+}
+
+.kuliner-content {
+    padding: 10px 15px;
+    color: #fff;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+.kuliner-card:hover .kuliner-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Budaya */
+#budaya p {
+    padding-bottom: 20px;
+}
+
+#budaya img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Aside */
+aside {
+    float: left;
+    width: 23%;
+    border: 1px solid rgb(216, 213, 213);
+    text-align: center;
+    border-radius: 7px;
+}
+
+.header-aside {
+    background-image: linear-gradient(-90deg, #8c7ae6, #0097e6);
+    padding: 30px 0 20px 0;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+aside img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.content-aside {
+    padding: 10px 20px;
+    color: black;
+}
+
+.blue {
+    color: #0097e6;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-image: url(../img/footer/geometric-leaves.png);
+    background-color: #0097e6;
+    text-align: center;
+    height: 100px;
+    line-height: 100px;
+    font-size: 1.1em;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 1000px) {
+    #kti .kti-container {
+        flex-wrap: wrap;
+    }
+
+    .kti-card {
+        width: 40%;
+    }
+
+    #content,
+    aside {
+        width: 100%;
+    }
+
+    .thumbnail {
+        width: 48%;
+    }
+
+    .kuliner-card {
+        width: 48%;
+    }
+
+}
+
+/* Ukuran Tablet */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        width: 50%;
+    }
+
+    #kti .kti-container {
+        flex-direction: column;
+    }
+
+    .kti-card {
+        width: 100%;
+    }
+
+    .thumbnail {
+        width: 100%;
+    }
+
+}
+
+/* Ukuran mobile */
+@media screen and (max-width: 576px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        position: absolute;
+        width: 50%;
+        right: 0;
+        height: 91vh;
+        top: 9vh;
+        background-color: #8c7ae6;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 9;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+    }
+    .kuliner-card {
+        width: 100%;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
